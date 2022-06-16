@@ -6,7 +6,8 @@ include("php-class.php");
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Payment Getway #1</title>
+		<title>Payment Getway #9</title>
+		<link rel="stylesheet" type="text/css" href="css/fancybox.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		
@@ -25,11 +26,11 @@ include("php-class.php");
 			<a href="index-10.php">Design #10</a>
 		</nav>
 
-		<div class="payment-getway-main design-1">
+		<div id="paymentPopup" class="payment-getway-main design-9">
 		    <div class="payment-getway-inner">
 		        <div class="payment-header">
 		            <h3>Payment Details</h3>
-		            <span class="payment-icon"><img src="https://ipp.tvistech.com/images/payments-icon.png" alt=""></span>
+		            <span class="payment-icon"><img src="images/payments-icon.png" alt=""></span>
 		        </div>
 		        <div class="payment-middle">
 		            <form id="myform" action="confirmedpayment.php" class="search-form paymentWidgets" data-brands="VISA MASTER" data-theme="divs"></form>
@@ -37,19 +38,17 @@ include("php-class.php");
 		    </div>
 		</div>
 
-		<!--  <script type="text/javascript" src="js/creditCardValidator.js"></script> -->
+		<!-- <script type="text/javascript" src="js/creditCardValidator.js"></script> -->
+		<script type="text/javascript" src="js/fancybox.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/payform.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
-
-
-
 
 		<script>
 		    var payment_settings = {
 		        "payw_failed_payment"       :   "Payment Failed. Please try again.",
 		        "payw_cardholder"           :   "CUSTOMER NAME",
 		        "payw_cardno"               :   "CREDIT CARD NUMBER",
-		        "payw_expmonth"             :   "EXPIRATION DATE",
+		        "payw_expmonth"             :   "Exp. Date",
 		        "payw_expyear"              :   "Expiry year",
 		        "payw_cvv"                  :   "CVV",
 		        "placeholder_payw_cardholder" :   "e.g. John E Cash",
@@ -58,7 +57,7 @@ include("php-class.php");
 		        "placeholder_payw_expyear" :   "-- / --",
 		        "placeholder_payw_cvv" :   "123",
 		        "payw_confirmPayment"       :   "Button",
-		        "payw_confirmPayment_btn"   :   "PAY NOW",
+		        "payw_confirmPayment_btn"   :   "Make Payment",
 		        "waiting_icon"              :   "https://icon-library.com/images/waiting-icon-png/waiting-icon-png-19.jpg",
 		    };
 		    var payment_hooks = {
