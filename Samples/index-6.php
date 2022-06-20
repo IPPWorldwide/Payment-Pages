@@ -6,14 +6,15 @@ include("php-class.php");
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Payment Getway #1</title>
+		<title>Payment Getway #3</title>
+		<link rel="stylesheet" type="text/css" href="css/fancybox.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		
 	</head>
 	<body>
 		<nav>
-			<a href="/">Design #1</a>
+			<a href="index">Design #1</a>
 			<a href="index-2.php">Design #2</a>
 			<a href="index-3.php">Design #3</a>
 			<a href="index-4.php">Design #4</a>
@@ -25,24 +26,22 @@ include("php-class.php");
 			<a href="index-10.php">Design #10</a>
 		</nav>
 
-		<div class="payment-getway-main design-1">
+		<div id="paymentPopup" class="payment-getway-main design-6">
 		    <div class="payment-getway-inner">
 		        <div class="payment-header">
 		            <h3>Payment Details</h3>
-		            <span class="payment-icon"><img src="https://ipp.tvistech.com/images/payments-icon.png" alt=""></span>
 		        </div>
 		        <div class="payment-middle">
 		            <form id="myform" action="confirmedpayment.php" class="search-form paymentWidgets" data-brands="VISA MASTER" data-theme="divs"></form>
+					<div class="payment-filed text-center"><span class="payment-icon"><img src="images/payments-icon.png" alt=""></span></div>
 		        </div>
 		    </div>
 		</div>
 
-		<!--  <script type="text/javascript" src="js/creditCardValidator.js"></script> -->
+		<!-- <script type="text/javascript" src="js/creditCardValidator.js"></script> -->
+		<script type="text/javascript" src="js/fancybox.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/payform.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
-
-
-
 
 		<script>
 		    var payment_settings = {

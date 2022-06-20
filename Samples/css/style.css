@@ -1,0 +1,391 @@
+@font-face{font-family:'Khand';src:url('../fonts/Khand-Light.woff2') format('woff2'),url('../fonts/Khand-Light.woff') format('woff');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'Khand';src:url('../fonts/Khand-Medium.woff2') format('woff2'),url('../fonts/Khand-Medium.woff') format('woff');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Khand';src:url('../fonts/Khand-Regular.woff2') format('woff2'),url('../fonts/Khand-Regular.woff') format('woff');font-weight:normal;font-style:normal;font-display:swap;}
+@font-face{font-family:'Khand';src:url('../fonts/Khand-Bold.woff2') format('woff2'),url('../fonts/Khand-Bold.woff') format('woff');font-weight:bold;font-style:normal;font-display:swap;}
+@font-face{font-family:'Khand';src:url('../fonts/Khand-SemiBold.woff2') format('woff2'),url('../fonts/Khand-SemiBold.woff') format('woff');font-weight:600;font-style:normal;font-display:swap;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+*{box-sizing:border-box;}
+body{padding:0;margin:0;font-family:'Khand';font-weight:400}
+input,textarea{font-family:'Roboto',sans-serif;}
+.text-center{text-align:center;}
+.button{padding:15px 20px 13px;margin:80px auto 30px;background:#fecd3e;color:#2d4444;font-size:18px;font-weight:600;text-decoration:none;text-transform:uppercase;display:table;}
+.fancybox-slide--html .fancybox-content {
+	background: transparent;
+	width: auto;
+	padding: 30px;
+}
+.fancybox-slide--html .fancybox-close-small {
+	color: currentColor;
+	padding: 10px;
+	top: 10px;
+	position: fixed;
+	right: 10px;
+	background: rgba(255,255,255,0.5);
+}
+
+nav{display:flex;justify-content:center;width:100%;padding:20px 0;position:absolute;top:0;left:0;}
+nav a{text-decoration:none;font-size:20px;margin:0 20px;color:#000;border-bottom:1px solid #000;}
+.search-form.paymentWidgets{width:100%;height: 100%;}
+.PaymentFields{display:flex;flex-wrap:wrap;}
+#div_payw_confirm .field-description{display:none;}
+#payw_confirmPayment:focus{outline: none;}
+
+.PaymentFields #div_payw_failed{margin-bottom: 15px;padding: 0 !important;width: 100%;position: relative;display: table;text-align: center;border: none !important;
+background: transparent !important;} 
+.PaymentFields #div_payw_failed .field-description {
+	color: red;
+	text-transform: inherit;
+	font-size: 15px;
+	font-weight: 600;
+	font-family: 'Montserrat',sans-serif;
+	letter-spacing: 0.3px;
+	position: static;
+}
+.payment-middle{position: relative;}
+.search-form > center > img{
+	width: 100px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
+	margin-top: -50px;
+	animation: animateBg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes animateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.search-form iframe {
+	width: 100% !important;
+	border: none;
+	height: 100% !important;
+}
+.payment-middle{min-height: 350px;}
+.isActive .payment-filed .payment-icon{display: none;}
+
+/*========================*/
+
+/*Design 1*//*==========================*/
+.design-1{display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#e3f3fa;}
+.design-1 .payment-getway-inner{max-width:600px;width:100%;}
+.design-1 .payment-header{display:flex;justify-content:space-between;align-items:center;padding:22px 30px 20px;border-bottom:1px solid #ccc;}
+.design-1 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-1 .payment-getway-inner{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #ccc;}
+.design-1 h3{background:;color:#343434;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;line-height:1;}
+.design-1 .payment-middle{padding:30px;display:flex;flex-wrap:wrap;}
+.design-1 .PaymentFields{margin:0 -10px;}
+.design-1 .payment-filed,.design-1 .PaymentFields > div{margin-bottom:20px;padding:0 10px;width:100%;position:relative;}
+.design-1 .payment-filed.half,.design-1 .PaymentFields > div.half{width:50%;}
+.design-1 .payment-filed label,.design-1 .field-description{display:block;font-size:15px;text-transform:uppercase;font-weight:500;margin-bottom:3px;letter-spacing:0.3px;}
+.design-1 .payment-filed .input-field,.design-1 .payw_keyupconfirm{border:1px solid #ccc;padding:13px 15px;border-radius:5px;width:100%;font-size:16px;font-weight:700;color:#333;font-family:'Space Mono',monospace;}
+.design-1 .payment-filed .input-field:focus,.design-1 .payw_keyupconfirm:focus{outline:none;border-color:#666;}
+.design-1 .payment-filed .input-field:placeholder{color:#999;opacity:1;}
+.design-1 .payment-filed input[type="submit"],.design-1 .payment-filed .submit,.design-1 #payw_confirmPayment{font-family:'Khand';text-transform:uppercase;padding:13px 20px 11px;background:rgba(16,185,129,1);color:#fff;font-weight:600;border:none;font-size:21px;cursor:pointer;width:100%;}
+.payment-filed input[type="submit"]:focus,.payment-filed .submit:focus{outline:none;}
+.design-1 .payment-filed input[type="submit"]:hover,.design-1 .payment-filed .submit:hover{background:rgba(16,185,129,0.85);}
+.design-1 .payment-filed .submit{display:flex;align-items:center;justify-content:center;}
+.design-1 .payment-filed .submit img{max-height:20px;margin-right:5px;margin-top:-5px;}
+.design-1 .payment-note{margin-bottom:0;color:#777;font-family:'Roboto',sans-serif;font-weight:300;font-size:14px;}
+.design-1 .payment-note b{font-weight:500;}
+.design-1 .input-checkbox-field label{text-transform:inherit;}
+.design-1 .input-checkbox-field input{display:none;}
+.design-1 .input-checkbox-field input + span{display:flex;align-items:center;font-size:14px;font-family:'Roboto',sans-serif;color:#666;}
+.design-1 .input-checkbox-field input + span:before{width:20px;height:20px;content:'';border:1px solid #ccc;margin-right:5px;border-radius:50%;}
+.design-1 .input-checkbox-field input:checked + span:before{box-shadow:0 0 0 5px #fff inset;background:#fecd3e;}
+.payment-card-filed{position:relative;}
+.payment-card-filed .input-result{content:'';position:absolute;right:20px;bottom:12px;z-index:9;background-repeat:no-repeat;width:18px;height:18px;background-size:18px;opacity:0;}
+.payment-card-filed.error .input-result{opacity:1;background-image:url(../images/close.svg);}
+.payment-card-filed.valid .input-result{opacity:1;background-image:url(../images/check.svg);}
+.payment-filed.error .input-field,.error > .payw_keyupconfirm{border-color:red!important;}
+.payment-filed.valid .input-field,.valid > .payw_keyupconfirm{border-color:#10b981!important;}
+.payment-card-filed .input-field.required{border-color:red!important;}
+
+/*========================*/
+
+/*Design 2*//*==========================*/
+
+.design-2{display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#d4bbd5;}
+.design-2 .payment-getway-inner{max-width:400px;width:100%;}
+.design-2 .payment-header{padding:22px 30px 20px;border-bottom:1px solid #eee;text-align:center;}
+.design-2 .payment-icon img{max-width:125px;vertical-align:top;margin-top: 5px;}
+.design-2 .payment-getway-inner{background:#fff;border-radius:10px;overflow:hidden;}
+.design-2 h3{background:;color:#343434;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;line-height:1;font-size: 26px;}
+.design-2 .payment-middle{padding:30px;display:flex;flex-wrap:wrap;}
+.design-2 .PaymentFields{margin:0 -10px;}
+
+.design-2 .payment-filed,.design-2 .PaymentFields > div{margin-bottom:20px;padding:0 10px;width:100%;}
+.design-2 .payment-filed label,.design-2 .field-description{display:table;font-size:15px;text-transform:uppercase;font-weight:500;margin-bottom:0;letter-spacing:0.3px;position:relative;background:#fff;margin-left:12px;padding:0 10px;color:#444;margin-bottom:-13px;}
+.design-2 .payment-filed .input-field,.design-2 .payw_keyupconfirm{border:1px solid #ccc;padding:18px 20px 14px;border-radius:5px;width:100%;font-size:16px;font-weight:400;color:#333;font-weight:700;color:#333;font-family:'Space Mono',monospace;}
+.design-2 .payment-filed .input-field:focus,.design-2 .payw_keyupconfirm:focus{outline:none;border-color:#fecd3e;}
+.design-2 .payment-filed .input-field::placeholder{color:#ccc;opacity:1;}
+.design-2 .payment-filed input[type="submit"],.design-2 .payment-filed .submit,.design-2 #payw_confirmPayment{font-family:'Khand';text-transform:uppercase;padding:13px 20px 11px;background:rgba(16,185,129,1);color:#fff;font-weight:600;border:none;font-size:21px;cursor:pointer;width:100%;}
+.design-2 .payment-filed input[type="submit"]:hover,.design-2 .payment-filed .submit:hover{background:rgba(16,185,129,0.85);}
+
+
+/*========================*/
+
+/* Design 3 *//*==========================*/
+#paymentPopup{display:flex;align-items:center;justify-content:center;}
+.design-3#paymentPopup{max-width: 460px !important;width: 100% !important;}
+.design-3 .payment-getway-inner{max-width:100%;width:100%;border:1px solid #ccc;margin: 0 auto;}
+.design-3 .payment-header{padding:22px 30px 20px;border-bottom:1px solid #ccc;text-align:center;background:#eee;}
+.design-3 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-3 .payment-getway-inner{background:#fff;overflow:hidden;}
+.design-3 h3{background:;color:#343434;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;line-height:1;}
+
+.design-3 .payment-middle{padding:30px;display:flex;flex-wrap:wrap;}
+
+.design-3 .payment-filed,.design-3 .PaymentFields > div{width:100%;margin-bottom:20px;}
+.design-3 .PaymentFields > div:not(#div_payw_confirm){padding:0 10px;width:100%;background:#fff;border:1px solid #eee;padding:10px 15px 5px;}
+.design-3 .payment-filed label,.design-3 .field-description{display:table;font-size:14px;text-transform:uppercase;font-weight:500;margin-bottom:0;position:relative;color:#555;font-family:'Roboto',sans-serif;}
+.design-3 .payment-filed .input-field,.design-3 .payw_keyupconfirm{border:none;padding:8px 0 5px;border-radius:5px;width:100%;font-size:15px;font-weight:400;color:#333;
+font-weight:700;color:#333;font-family:'Space Mono',monospace;}
+.design-3 .payment-filed .input-field:focus,.design-3 .payw_keyupconfirm:focus{outline:none;border-color:#fecd3e;}
+.design-3 .payw_keyupconfirm::placeholder{color:#ccc;opacity:1;}
+
+.design-3 .payment-filed input[type="submit"],.design-3 .payment-filed .submit,.design-3 #payw_confirmPayment{font-family:'Khand';text-transform:uppercase;padding:13px 20px 11px;background:rgba(16,185,129,1);color:#fff;font-weight:600;border:none;font-size:21px;cursor:pointer;width:100%;}
+.design-3 .payment-filed input[type="submit"]:hover,.design-3 .payment-filed .submit:hover,.design-3 #payw_confirmPayment:hover{background:rgba(16,185,129,0.85);}
+.design-3 .field-group.error{border-color:red;}
+.design-3 .field-group.valid{border-color:#10b981;}
+
+/*========================*/
+
+/*Design 4*//*==========================*/
+.design-4{font-family:'Montserrat',sans-serif;display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#a5895e;}
+.design-4 .payment-getway-inner{max-width:450px;width:100%;}
+.design-4 .payment-header{border-bottom:1px solid #eee;text-align:center;}
+.design-4 .payment-icon{margin-top:20px;margin-bottom:0!important;}
+.design-4 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-4 .payment-getway-inner{background:#fff;border-radius:0;overflow:hidden;border-radius:0 60px 0 60px;}
+.design-4 h3{background:;color:#343434;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;line-height:1;}
+.design-4 .payment-middle{padding:50px 40px 35px;display:flex;flex-wrap:wrap;}
+.design-4 .payment-filed,.design-4 .PaymentFields > div{margin-bottom:20px;padding:0;width:100%;}
+.design-4 .payment-filed label,.design-4 .field-description{display:table;font-size:15px;text-transform:uppercase;font-weight:700;margin-bottom:0;letter-spacing:1px;position:relative;background:#fff;color:#777;font-family:'Space Mono',monospace;font-weight:700}
+.design-4 .payment-filed .input-field,.design-4 .payw_keyupconfirm{border:none;border-bottom:2px solid #ccc;padding:15px 0 12px;border-radius:0;width:100%;font-size:16px;font-weight:400;color:#333;box-shadow:none;letter-spacing:1px;font-family:'Space Mono',monospace;font-weight:700;}
+.design-4 .payment-filed .input-field:focus,.design-4 .payw_keyupconfirm:focus{outline:none;border-color:#999;}
+.design-4 .payw_keyupconfirm::placeholder{color:#ccc;opacity:1;}
+
+.design-4 .payment-filed input[type="submit"],.design-4 .payment-filed .submit,.design-4 #payw_confirmPayment{font-family:'Montserrat',sans-serif;padding:15px 18px;background:#555;color:#fff;font-weight:700;border:none;font-size:21px;cursor:pointer;width:100%;box-shadow:5px 5px 0 0px #ccc;border-radius:20px 0 20px 0;}
+.design-4 .payment-filed input[type="submit"]:hover,.design-4 .payment-filed .submit:hover,.design-4 #payw_confirmPayment:hover{background:#444;}
+.design-4 .payment-card-filed.valid .input-field{color:#10b981!important;}
+.design-4 .payment-card-filed.valid .input-result,.design-4 .payment-card-filed.error .input-result{right:10px;bottom:15px;}
+
+
+/*========================*/
+
+/*Design 5*//*==========================*/
+.design-5{font-family:'Montserrat',sans-serif;display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#90c8fd;}
+.design-5 .payment-getway-inner{max-width:500px;width:100%;}
+.design-5 .payment-header{text-align:center;padding:25px 30px 22px;color:#fff;background:#0b53a7;color:#fff;font-weight:400;border-radius:15px 15px 0 0;}
+.design-5 .payment-icon{margin-top:20px;margin-bottom:0!important;}
+.design-5 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-5 .payment-getway-inner{background:#fff;border-radius:0;border-radius:15px;}
+.design-5 h3{margin:0;font-weight:600;letter-spacing:0.5px;line-height:1;font-size:24px;}
+.design-5 .payment-middle{padding:30px 30px 0;display:flex;flex-wrap:wrap;}
+.design-5 .PaymentFields{margin:0 -10px;}
+
+.design-5 .payment-filed,.design-5 .PaymentFields > div{margin-bottom:20px;padding:0 10px;width:100%;}
+.design-5 .payment-filed.half,.design-5 .PaymentFields > div.half{width:50%;}
+.design-5 .payment-filed label,.design-5 .field-description{display:table;font-size:15px;font-weight:600;margin-bottom:5px;position:relative;background:#fff;color:#444;}
+.design-5 .payment-filed .input-field,.design-5 .payw_keyupconfirm{border:2px solid #ddd;padding:15px;border-radius:0;width:100%;font-size:17px;font-weight:400;color:#333;box-shadow:none;border-radius:8px;letter-spacing:1px;font-family:'Space Mono',monospace;font-weight:700;}
+.design-5 #div_payw_cardno .payw_keyupconfirm{background-image:url(../images/cards.png);background-repeat:no-repeat;background-position:calc(100% - 10px) 11px;}
+
+.design-5 .payment-filed .input-field:focus,.design-5 .payw_keyupconfirm:focus{outline:none;border-color:#999;}
+.design-5 .payw_keyupconfirm::placeholder{color:#ccc;opacity:1;}
+.design-5 #div_payw_confirm{width: auto;display: table;margin: 0 auto;}
+.design-5 .payment-filed input[type="submit"],.design-5 .payment-filed .submit,.design-5 #payw_confirmPayment{font-family:'Montserrat',sans-serif;
+	padding:20px 30px;background:#0b53a7;color:#fff;font-weight:600;border:none;font-size:18px;cursor:pointer;border-radius:8px;margin:0 auto;
+	width:100%;border-radius:50px;max-width:200px;margin-bottom:-45px;margin-top:20px;min-width: 210px;}
+.design-5 .payment-filed input[type="submit"]:hover,.design-5 .payment-filed .submit:hover,.design-5 #payw_confirmPayment:hover{background:#444;}
+
+.design-5 .payment-card-filed .input-result{display:none;}
+.design-5 .payment-card-filed.valid .input-field{color:#10b981!important;}
+.design-5 .payment-card-filed.valid .input-result{bottom:18px;right:24px;}
+.design-5 .payment-card-filed.error .input-result{bottom:18px;right:24px;}
+.design-5 .PaymentFields #div_payw_failed .field-description{width: 100%;}
+.design-5.isActive .payment-middle{height: auto !important;}
+.design-5.isActive .search-form iframe{height: 400px !important;}
+/*========================*/
+
+/*Design 6*//*==========================*/
+.design-6{display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#f3fcfc;}
+.design-6 .payment-getway-inner{max-width:500px;width:100%;}
+.design-6 .payment-header{padding:22px 30px 20px;border-bottom:1px solid #222;text-align:center;}
+.design-6 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-6 .payment-getway-inner{background:#000;border-radius:10px;overflow:hidden;}
+.design-6 h3{background:;color:#ddd;margin:0;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;font-size:24px;line-height:1;}
+
+.design-6 .payment-middle{padding:30px;display:flex;flex-wrap:wrap;}
+
+.design-6 .payment-filed,.design-6 .PaymentFields > div{width:100%;margin-bottom:15px;}
+.design-6 .PaymentFields > div:not(#div_payw_confirm){padding:0 10px;width:100%;background:#111;border:1px solid #333;padding:10px 15px 5px;}
+.design-6 .payment-filed label,.design-6 .field-description{display:table;font-size:14px;text-transform:uppercase;font-weight:500;margin-bottom:0;position:relative;color:#999;font-family:'Roboto',sans-serif;}
+.design-6 .payment-filed .input-field, .design-6 .payw_keyupconfirm {border: none;padding: 13px 0 10px;border-radius: 5px;width: 100%;font-size: 15px;font-weight: 400;
+	color: #333;font-weight: 700;color: #ccc;font-family: 'Space Mono',monospace;background: transparent;}
+.design-6 .payment-filed .input-field:focus,.design-6 .payw_keyupconfirm:focus{outline:none;border-color:#fecd3e;}
+.design-6 .payw_keyupconfirm::placeholder{color:#999;opacity:1;}
+
+.design-6 .payment-filed input[type="submit"],.design-6 .payment-filed .submit,.design-6 #payw_confirmPayment{font-family:'Khand';text-transform:uppercase;padding:13px 20px 11px;background:rgba(16,185,129,1);color:#fff;font-weight:600;border:none;font-size:21px;cursor:pointer;width:100%;}
+.design-6 .payment-filed input[type="submit"]:hover,.design-6 .payment-filed .submit:hover,.design-6 #payw_confirmPayment:hover{background:rgba(16,185,129,0.85);}
+.design-6 .field-group.error{border-color:red;}
+.design-6 .field-group.valid{border-color:#10b981;}
+
+.isActive.design-6 .payment-getway-inner{background:#fff}
+.isActive.design-6 h3{color: #666;}
+.isActive.design-6 .payment-header{border-bottom-color: #eee;}
+
+/*========================*/
+
+
+/*Design 7*//*==========================*/
+
+
+.design-7#paymentPopup{display:flex;align-items:center;justify-content:center;}
+.design-7#paymentPopup{max-width: 550px !important;width: 100% !important;}
+.design-7 .payment-getway-inner{max-width:100%;width:100%;box-shadow:3px 3px 18px rgb(0 0 0 / 10%);background:#232323;border-radius:10px;overflow:hidden;}
+
+.design-7 .payment-middle{padding:40px 30px;display:flex;flex-wrap:wrap;margin:0;}
+.design-7 .payment-filed,.design-7 .PaymentFields > div{margin-bottom:25px;padding:0;width:100%;display:inline-block;}
+.design-7 .payment-filed label,.design-7 .field-description{display:table;letter-spacing:1px;position:relative;padding:0;font-family:'Space Mono',monospace;font-size:16px;font-weight:600;margin-bottom:0;color:#fff;text-transform:capitalize;}
+.design-7 .payment-filed .input-field, .design-7 .payw_keyupconfirm{border:1px solid #3b3b3b;padding:15px 20px;border-radius:5px;width:100%;font-size:15px;font-weight:700;color:#fff;background:#3b3b3b;box-shadow:3px 3px 10px rgb(0 0 0 / 5%);font-family:'Space Mono',monospace;letter-spacing:1px;}
+.design-7 .payment-filed .input-field:focus, .design-7 .payw_keyupconfirm:focus{outline:none;border-color:#fecd3e;}
+.design-7 .payment-filed .input-field::placeholder, .design-7 .payw_keyupconfirm::placeholder{color:#999;opacity:1;}
+.design-7 .payment-filed.half{width:100%;justify-content:space-between;display:flex;}
+
+
+.design-7 .submit-group{display:flex;justify-content:flex-end;margin-bottom:0;}
+.design-7 .payment-filed input[type="submit"],.design-7 .payment-filed .submit,.design-7 #payw_confirmPayment{padding:16px 20px;background:rgba(16,185,129,1);color:#fff;border:none;font-size:22px;cursor:pointer;border-radius:10px;font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;
+display:flex;align-items:center;justify-content:center;width:100%;background-image:linear-gradient(to right top,#d35497,#d24cab,#cb48c2,#ba4bdc,#9b53f8);}
+/*.design-7 .payment-filed input[type="submit"]:hover,.design-7 .payment-filed .submit:hover,.design-7 #payw_confirmPayment:hover{background:rgba(16,185,129,0.85);}*/
+.design-7 .PaymentFields > div.half {display: flex;justify-content: space-between;align-items: center;}
+.design-7 .field-description .note{font-size:12px;font-family:'Space Mono',monospace;letter-spacing:normal;color:#999;margin-bottom:10px;display:block;margin-top: 3px;}
+.design-7 .PaymentFields > div.half input{max-width:110px;}
+
+.isActive.design-7 .payment-getway-inner{background:#fff;}
+
+/*.design-7 .input-checkbox-field label{text-transform: inherit;}.design-7 .input-checkbox-field input{display: none;}.design-7 .input-checkbox-field input + span{display: flex;align-items: center;font-size: 14px;font-family: 'Roboto', sans-serif;color: #666;}.design-7 .input-checkbox-field input + span:before{width: 20px;height: 20px;content: '';border: 1px solid #ccc;margin-right:5px;border-radius: 50%;}.design-7 .input-checkbox-field input:checked + span:before{box-shadow: 0 0 0 5px #fff inset;background: #fecd3e;}*/
+
+/*========================*//*Design 8*//*==========================*/
+
+.design-8{display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#f9f9f9;}
+.design-8 .payment-getway-inner{max-width:400px;width:100%;}
+.design-8 .payment-header{padding:22px 30px 0px;border-bottom:1px solid #eee;text-align:center;background:#333;position:relative;margin-bottom:30px;}
+.design-8 .payment-icon img{max-height:20px;vertical-align:top;position: relative;} 
+.design-8 .payment-getway-inner{background:#fff;overflow:hidden;border:2px solid #333;}
+.design-8 h3{color:#fff;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-family:'Montserrat',sans-serif;line-height:1;margin-bottom:10px;font-size:22px;position:relative;z-index:1;}
+.design-8 .payment-header::before{width:100%;background:#333;content:'';height:100%;transform:skewY(3deg);position:absolute;left:0;bottom:-18px;}
+.design-8 .payment-middle{padding:30px 30px 10px;display:flex;flex-wrap:wrap;}
+.design-9 .PaymentFields{margin:0 -10px;}
+
+.design-8 .payment-filed,.design-8 .PaymentFields > div{margin-bottom:25px;padding:0 10px;width:100%;position:relative;}
+.design-8 .payment-filed label,.design-8 .field-description{font-size:15px;text-transform:uppercase;font-weight:700;margin-bottom:0;background:#fff;padding:0 10px;color:#999;margin-bottom:-13px;font-family:'Space Mono',monospace;letter-spacing:1px;position:absolute;top:18px;left:18px;z-index:1;pointer-events:none;transition:top 0.3s;}
+.design-8 .payment-filed.isFocus label,.design-8 .field-description.isFocus{top:-8px;font-size:13px;color:#333;}
+.design-8 .payment-filed .input-field, .design-8 .payw_keyupconfirm{border:1px solid #ccc;padding:18px 18px 14px;width:100%;font-size:16px;font-weight:400;color:#333;font-weight:700;color:#333;font-family:'Space Mono',monospace;}
+.design-8 .payment-filed .input-field:focus, .design-8 .payw_keyupconfirm:focus{outline:none;border-color:#fecd3e;}
+.design-8 .payw_keyupconfirm::placeholder{color:#ccc;opacity:1;}
+
+
+.design-8 .payment-filed input[type="submit"],.design-8 .payment-filed .submit,.design-8 #payw_confirmPayment{text-transform:uppercase;padding:25px;background:#333;color:#fff;font-weight:600;border:none;font-size:20px;cursor:pointer;width:100%;font-family:'Montserrat',sans-serif;}
+.design-8 .payment-filed input[type="submit"]:hover,.design-8 .payment-filed .submit:hover,.design-8 #payw_confirmPayment:hover{background:rgba(16,185,129,0.85);}
+.design-8 .payment-filed .submit{display:flex;align-items:center;justify-content:center;}
+.design-8 .payment-filed .submit img{max-height:20px;margin-right:5px;margin-top:-5px;}
+
+.design-8 .payment-card-filed.valid .input-result,.design-8 .payment-card-filed.error .input-result{right:18px;bottom:18px;}
+
+.design-8.isActive .payment-middle{height: auto !important;}
+.design-8.isActive .search-form iframe{height: 420px !important;}
+
+/*========================*/
+
+/*Design 9*//*==========================*/
+.design-9{display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#f3fcfc;}
+.design-9 .payment-getway-inner{max-width:650px;width:100%;}
+.design-9 .payment-header{padding:22px 30px 20px;border-bottom:1px solid #ccc;background: #eee;display: flex;justify-content: space-between;align-items: center;}
+.design-9 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-9 .payment-getway-inner{background:#fff;overflow:hidden;border:1px solid #ccc;}
+.design-9 h3{background:;color:#666;margin:0;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;font-size:24px;line-height:1;}
+.design-9 .payment-middle{padding:50px 30px;display:flex;flex-wrap:wrap;min-height: 250px;}
+.design-9 .PaymentFields #div_payw_failed{padding: 0 15px !important;}
+
+.design-9 .PaymentFields{margin:0 -15px;}
+.design-9 .payment-filed,.design-9 .PaymentFields > div{margin-bottom:30px;padding:0 15px;width:100%;}
+.design-9 #div_payw_cardholder,
+.design-9 #div_payw_cardno,
+.design-9 #div_payw_confirm{width:50%;}
+.design-9 .payment-filed.forth,
+
+.design-9 #div_payw_expmonth,
+.design-9 #div_payw_cvv{width:25%;}
+.design-9 .payment-filed label,.design-9 .field-description{display:table;font-size:15px;text-transform:uppercase;font-weight:600;margin-bottom:0;position:relative;padding:0;color:#333;margin-bottom:2px;font-family:'Montserrat',sans-serif;margin-bottom:10px;}
+.design-9 .payment-filed .input-field, .design-9 .payw_keyupconfirm{border:1px solid #ccc;padding:15px 20px;border-radius:5px;width:100%;font-size:15px;font-weight:400;color:#333;background:#fff;color:#333;letter-spacing:1px;font-family:'Space Mono',monospace;font-weight:700;}
+.design-9 .payment-filed .input-field:focus, .design-9 .payw_keyupconfirm:focus{outline:none;border-color:#fecd3e;}
+.design-9 .payment-filed .input-field::placeholder,.design-9 .payw_keyupconfirm::placeholder{color:#999;opacity:1;}
+.design-9 .payment-filed input[type="submit"], .design-9 .payment-filed .submit, .design-9 #payw_confirmPayment {font-family: 'Khand';
+text-transform: uppercase;padding: 10px 20px 9px;background: rgba(16,185,129,1);color: #fff;font-weight: 600;border: none;font-size: 21px;cursor: pointer;width: 100%;
+width: 100%;margin-top: 28px;}
+.design-9 .payment-filed input[type="submit"]:hover,.design-9 .payment-filed .submit:hover,.design-9 #payw_confirmPayment:hover{background:rgba(16,185,129,0.85);}
+
+.design-9 .vendor-icons{background:url(../images/payments-icon-strip.png) no-repeat;width:144px;height:32px;background-position:0 -105px;position:relative;top:0;}
+.design-9 .payment-card-filed.valid .input-result,.design-9 .payment-card-filed.error .input-result{right:20px;bottom:18px;}
+
+.design-9.isActive .payment-middle{height: auto !important;}
+.design-9.isActive .search-form iframe{height: 420px !important;}
+
+
+/*========================*/
+
+/*Design 10*//*==========================*/  
+
+.design-10{font-family:'Montserrat',sans-serif;display:flex;align-items:center;justify-content:center;width:100%;height:100vh;background:#e2f3fe;}
+.design-10 .payment-getway-inner{max-width:380px;width:100%;}
+.design-10 .payment-header{text-align:center;padding:10px 0 20px;color:#fff;font-weight:400;}
+.design-10 .payment-icon{margin-top:20px;margin-bottom:0!important;}
+.design-10 .payment-icon img{max-width:135px;vertical-align:top;}
+.design-10 .payment-getway-inner{background:#0069fe;border-radius:0;border-radius:15px;position:relative;overflow:hidden;padding:30px;}
+.design-10 .payment-getway-inner::before{width:70px;height:70px;background:#09e894;position:absolute;right:-35px;top:-35px;content:'';transform:rotate(135deg);}
+.design-10 h3{margin:0;font-weight:600;letter-spacing:0.5px;line-height:1;font-size:24px;display:table;margin-bottom:0;}
+.design-10 .payment-middle{padding:0;display:flex;flex-wrap:wrap;margin:0 -10px;}
+
+.design-10 .payment-filed,.design-10 .PaymentFields > div{margin-bottom:20px;padding:0 10px;width:100%;background:#0046cb;padding:12px 15px 8px;border-radius:10px;margin:0 10px 20px;}
+.design-10 .payment-filed.half,.design-10 .PaymentFields > div.half{width:calc(50% - 20px);}
+.design-10 .payment-filed label,.design-10 .field-description{display:table;font-size:15px;font-weight:600;position:relative;color:#fff;}
+.design-10 .payment-filed .input-field, .design-10 .payw_keyupconfirm{border:none;padding:10px 0 8px;border-radius:0;width:100%;font-size:17px;font-weight:400;color:#fff;box-shadow:none;border-radius:8px;letter-spacing:1px;font-family:'Space Mono',monospace;font-weight:700;background:transparent;}
+.design-10 .payment-filed .input-field:focus, .design-10 .payw_keyupconfirm:focus{outline:none;border-color:#999;}
+.design-10 .payment-filed .input-field::placeholder,.design-10 .payw_keyupconfirm::placeholder{color:#ccc;opacity:1;}
+.design-10 .payment-filed.payment-filed-submit,.design-10 #div_payw_confirm{background:transparent;padding:0;}
+.design-10 .payment-filed input[type="submit"], .design-10 .payment-filed .submit, .design-10 #payw_confirmPayment{font-family:'Montserrat',sans-serif;padding:15px 20px;background:#09e894;color:#fff;font-weight:600;border:none;font-size:18px;cursor:pointer;border-radius:8px;margin:0 auto;width:100%;border-radius:15px;}
+.design-10 .payment-filed input[type="submit"]:hover,.design-10 .payment-filed .submit:hover,.design-10 #payw_confirmPayment:hover{background:#0fbc7b;}
+.design-10 .payment-filed .submit{display:flex;align-items:center;justify-content:center;}
+
+.design-10 .payment-card-filed.valid .input-field{color:#10b981!important;}
+.design-10 .payment-card-filed.valid .input-result,.design-10 .payment-card-filed.error .input-result{bottom:18px;right:10px;}
+
+.design-10.isActive .payment-middle{height: auto !important;}
+.design-10.isActive .search-form iframe{height: 420px !important;}
+.isActive.design-10 .payment-getway-inner{background:#fff}
+.isActive.design-10 h3{color: #666;}
+.isActive.design-10 .payment-header{border-bottom-color: #eee;}
+.design-10 .PaymentFields #div_payw_failed .field-description{color: #fff;}
+
+/*.design-10 .payment-note{margin-bottom:0;color:#777;font-family:'Montserrat',sans-serif;font-weight:300;font-size:14px;text-align:center;}
+.design-10 .payment-note b{font-weight:500;}
+.design-10 .input-checkbox-field label{text-transform:inherit;}
+.design-10 .input-checkbox-field input{display:none;}
+.design-10 .input-checkbox-field input + span{display:flex;align-items:center;font-size:14px;font-family:'Roboto',sans-serif;color:#666;}
+.design-10 .input-checkbox-field input + span:before{width:20px;height:20px;content:'';border:1px solid #ccc;margin-right:5px;border-radius:50%;}
+.design-10 .input-checkbox-field input:checked + span:before{box-shadow:0 0 0 5px #fff inset;background:#fecd3e;}*/
