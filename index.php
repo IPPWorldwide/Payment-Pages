@@ -14,7 +14,7 @@ $action = isset($_GET["action"]) ? urldecode($_GET["action"]) : "success.php";
 <body>
 
 <script src="https://pay.ippworldwide.com/pay.js?checkoutId=<?php echo $data_url; ?>&cryptogram=<?php echo $cryptogram; ?>"></script>
-<form action="#" class="paymentWidgets" data-brands="VISA MASTER" data-theme="supah"></form>
+<form action="#" class="paymentWidgets" data-brands="VISA MASTER" data-theme="divs"></form>
 
 </body>
 
