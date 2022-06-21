@@ -49,10 +49,7 @@ header("Strict-Transport-Security: max-age=16070400");
 header("X-XSS-Protection: 1; mode=block");
 header('X-Content-Type-Options: nosniff');
 
-// Old Key
-// $ipp = new IPPGateway("Of8l-eu2N-VuLD","kAI1cDvdHl9bK128t2y2b4Qn");
-// New Key
-$ipp = new IPPGateway("Of8l-eu2N-VuLD","kAI1cDvdHl9bK128t2y2b4Qn");
+$ipp = new IPPGateway("","");
 
 $data   = [];
 $data["currency"] = "DKK";
